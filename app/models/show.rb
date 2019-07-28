@@ -17,4 +17,6 @@ class Show < ActiveRecord::Base
     # show.first.attributes["name"]
     # show.first
   end
+  def self.ratings_sum
+  end  
 end
