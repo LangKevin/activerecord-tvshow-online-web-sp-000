@@ -15,6 +15,6 @@ class Show < ActiveRecord::Base
   def self.least_popular_show
     show = Show.order(rating: :asc).limit(1)
     # show.first.attributes["name"]
-    show
+    show.first
   end
 end
