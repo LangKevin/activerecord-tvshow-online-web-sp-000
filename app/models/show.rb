@@ -19,4 +19,9 @@ class Show < ActiveRecord::Base
   def self.popular_shows
     Show.where("rating > 5")
   end
+  def self.shows_by_alphabetical_order
+    # For this test return all movies released after 2002 and ordered by
+    # release date descending
+    Show.where("release_date > 2002").order(release_date: :asc)
+  end
 end
