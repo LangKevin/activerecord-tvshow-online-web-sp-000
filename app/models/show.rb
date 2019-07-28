@@ -3,5 +3,6 @@ class Show < ActiveRecord::Base
     Show.maximum(:rating)
   end
   def self.lowest_rating
-  end  
+    Show.minimum(:rating)
+  end
 end
