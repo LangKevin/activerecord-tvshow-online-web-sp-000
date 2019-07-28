@@ -8,7 +8,7 @@ class Show < ActiveRecord::Base
   def self.most_popular_show
     show = Show.order(rating: :desc).limit(1)
     # show.first.attributes["name"]
-    # binding.pry
+    binding.pry
     return show.as_json
 
   end
