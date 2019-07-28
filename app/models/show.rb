@@ -8,7 +8,7 @@ class Show < ActiveRecord::Base
   def self.most_popular_show
     show = Show.order(rating: :desc).limit(1)
     # show.first.attributes["name"]
-    show
+    show.keys.map { |key| self[key] }
     binding.pry
   end
   def self.least_popular_show
